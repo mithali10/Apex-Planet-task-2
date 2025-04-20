@@ -54,7 +54,7 @@ CREATE TABLE post (
 ## How to Run 
 - Place the project in the www/ or htdocs/ folder
 - Start Apache and MySQL
-- Visit http://localhost/your_project_folder/register.php to register a user
+- Visit http://localhost/my_blog/register.php to register a user
 - Log in via login.php
 - You’ll be redirected to dashboard.php which loads the post manager (add_post.php)
 
