@@ -49,32 +49,18 @@ CREATE TABLE post (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+```
 
----
+## How to Run 
+- Place the project in the www/ or htdocs/ folder
+- Start Apache and MySQL
+- Visit http://localhost/your_project_folder/register.php to register a user
+- Log in via login.php
+- You’ll be redirected to dashboard.php which loads the post manager (add_post.php)
 
-## 🛠️ Database Setup
+## Security Notes
+- Passwords are hashed using password_hash()
+- User sessions are protected and required to access the dashboard/post pages
+- Uses htmlspecialchars() to prevent XSS
 
-Create a MySQL database and run the following:
-
-```sql
-CREATE DATABASE your_database_name;
-
-USE your_database_name;
-
--- Users table
-CREATE TABLE users (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  username VARCHAR(100) NOT NULL UNIQUE,
-  password VARCHAR(255) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Posts table
-CREATE TABLE post (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  title VARCHAR(255) NOT NULL,
-  content TEXT NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-
+## Created by Mithali
