@@ -20,3 +20,61 @@ This is a basic blog web application built using PHP and MySQL. It includes user
 ## 📂 File Structure
 
 /project-root │ ├── register.php # Register a new user ├── login.php # Login form & logic ├── logout.php # Destroys session ├── dashboard.php # Protected page that includes add_post.php ├── add_post.php # Add, edit, delete, view posts (CRUD) ├── README.md # Project documentation └── db.sql
+
+
+---
+
+## 🛠️ Database Setup
+
+Create a MySQL database and run the following:
+
+```sql
+CREATE DATABASE your_database_name;
+
+USE your_database_name;
+
+-- Users table
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Posts table
+CREATE TABLE post (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  content TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+---
+
+## 🛠️ Database Setup
+
+Create a MySQL database and run the following:
+
+```sql
+CREATE DATABASE your_database_name;
+
+USE your_database_name;
+
+-- Users table
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Posts table
+CREATE TABLE post (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  content TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
